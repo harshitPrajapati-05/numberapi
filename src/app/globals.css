@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+
+html, body{
+    background: url('/bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.card {
+    backdrop-filter: blur(5px) saturate(115%);
+    -webkit-backdrop-filter: blur(5px) saturate(115%);
+    background-color: rgba(17, 25, 40, 0.42);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card2 :hover {
+    
+    backdrop-filter: blur(5px) saturate(115%);
+    -webkit-backdrop-filter: blur(5px) saturate(115%);
+    background-color: rgba(207, 153, 35, 0.534);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.125);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+
+
