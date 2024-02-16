@@ -29,7 +29,7 @@ const Home = () => {
       alert("we cannot go beyond 2025");
     } else {
       try {
-        const response = await axios.get(`https://numberapi.com/${inputYear}/year`);
+        const response = await axios.get(`https://numbersapi.com/${inputYear}/year`);
         setFactArray([...factArray, response.data]);
         
         setInterval(() => {
